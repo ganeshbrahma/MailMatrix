@@ -87,4 +87,16 @@ MailMatrix/ ├── app.py ├── controllers/ ├── static/ │ ├─
 3. Install the dependencies:
 
    ```bash
-   pip install -r requirements.txt 
+   pip install -r requirements.txt
+
+
+## 👥 Contributors
+
+Thanks to these awesome people:
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/sanjana-bobade"><img src="https://avatars.githubusercontent.com/u/sanjana-bobade?v=4" width="100px;" alt=""/><br /><sub><b>sanjana bobade</b></sub></a></td>
+  </tr>
+</table>
+
