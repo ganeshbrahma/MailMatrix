@@ -21,7 +21,7 @@ MailMatrix is a cloud-native serverless web application to automate bulk email n
 
 | Frontend | Backend | Cloud | DB |
 |----------|---------|--------|----|
-| HTML/CSS | Python, Flask | AWS (Lambda, SES, S3, EventBridge, Aurora and RDS, IAM, CloudWatch)
+| HTML/CSS | Python, Flask | AWS (Lambda, SES, S3, EventBridge, Aurora and RDS, IAM, CloudWatch) | MySQL |
 
 ---
 
