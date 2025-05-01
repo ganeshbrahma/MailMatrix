@@ -36,7 +36,7 @@ MailMatrix/ ├── app.py ├── controllers/ ├── static/ │ ├─
 ### 1️⃣ Set Up AWS Resources
 - Create an **S3 Bucket** (e.g., `mailmatrix-uploads`)
 - Create an **IAM Role** for Lambda:
-  - Permissions: S3 Read, SES SendEmail, CloudWatch Logs
+- Permissions: S3 Read, SES SendEmail, CloudWatch Logs
 - Enable **Amazon SES** (Sandbox or Production)
 - Create verified identities (emails)
 
@@ -56,16 +56,16 @@ MailMatrix/ ├── app.py ├── controllers/ ├── static/ │ ├─
   pip install -r requirements.txt
   
 ### 4️⃣ Upload Offer Letter + Recipient CSV
-Upload recipients.csv (sample provided in /sample-data)
-Upload the offer letter (PDF)
+- Upload recipients.csv (sample provided in /sample-data)
+- Upload the offer letter (PDF)
 
 ### 5️⃣ Lambda Execution
-Once the CSV is uploaded, Lambda is triggered
-For each row:
-If status = selected: Send offer letter as attachment
-If status = rejected: Send rejection email (no attachment)
-Emails are sent using Amazon SES
+- Once the CSV is uploaded, Lambda is triggered
+- For each row:
+- If status = selected: Send offer letter as attachment
+- If status = rejected: Send rejection email (no attachment)
+- Emails are sent using Amazon SES
 
 ### 6️⃣ Track History
-Login → Go to History page
-View past uploads and email actions taken
+- Login → Go to History page
+- View past uploads and email actions taken
