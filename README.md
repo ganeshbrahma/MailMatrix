@@ -69,3 +69,18 @@ MailMatrix/ ├── app.py ├── controllers/ ├── static/ │ ├─
 ### 6️⃣ Track History
 - Login → Go to History page
 - View past uploads and email actions taken
+
+## 📦 Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ganeshbrahma/MailMatrix.git
+   cd MailMatrix
+
+2. Create and activate a virtual environment:
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   
+3. Install the dependencies:
+   pip install -r requirements.txt 
