@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - MailMatrix</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body class="register-body">
+  <div class="register-logo">
+    <img src="{{ url_for('static', filename='mailmatrix-logo.png') }}" alt="MailMatrix Logo">
+  </div>
+
+  <div class="register-container">
+    <div class="register-avatar">
+      <img src="{{ url_for('static', filename='avatar.png') }}" alt="User Avatar">
+    </div>
+    <h2 class="register-title">Create Your Account</h2>
+
+    <form method="POST" action="/register">
+      <div class="register-grid">
+        <!-- Left Side -->
+        <div class="register-left">
+          <input type="text" name="first_name" placeholder="First Name" required>
+          <input type="text" name="last_name" placeholder="Last Name" required>
+          <div class="phone-group">
+            <select name="country_code" required>
+              <option value="+1">+1 (USA)</option>
+              <option value="+91">+91 (India)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+61">+61 (Australia)</option>
+            </select>
+            <input type="text" name="mobile" placeholder="Mobile Number" required>
+          </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="register-right">
+          <input type="text" name="organization" placeholder="Organization / Company" required>
+          <input type="email" name="email" placeholder="Email ID" required>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+
+
+      </div>
+
+        <div class="password-toggle-wrapper">
+          <label class="register-toggle">
+          <input type="checkbox" onclick="togglePassword()">
+          <span class="register-slider"></span>
+        </label>
+        <span>Show Password</span>
+        </div>
+
+
+      <button type="submit" class="register-btn">REGISTER</button>
+
+      <p class="login-link">Already have an account? <a href="/login">Login here</a></p>
+    </form>
+  </div>
+
+  <script>
+  function togglePassword() {
+    const pw1 = document.getElementById('password');
+    const pw2 = document.getElementById('confirm_password');
+    pw1.type = pw1.type === 'password' ? 'text' : 'password';
+    pw2.type = pw2.type === 'password' ? 'text' : 'password';
+  }
+</script>
+</body>
+</html>

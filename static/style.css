@@ -1,0 +1,157 @@
+body.login-body {
+    background-color: #f3fdfc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 900px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.login-image {
+    width: 50%;
+    background-color: #9bf2e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-box {
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #20c9b6, #4de1c9);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box .avatar {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.toggle-container {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.toggle-container input {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 14px; width: 14px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.toggle-container input:checked + .toggle-slider {
+    background-color: #20c9b6;
+}
+
+.toggle-container input:checked + .toggle-slider:before {
+    transform: translateX(20px);
+}
+
+.toggle-label {
+    margin-left: 10px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+
+/* Enhance input underline with color change on focus */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background: transparent;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  border-bottom: 2px solid #3ecfb0; /* pastel turquoise */
+}
+
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-header {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.logo-header img {
+    max-width: 280px;
+    height: auto;
+}
+

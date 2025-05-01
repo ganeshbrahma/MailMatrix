@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MailMatrix - Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>MailMatrix</h2>
+            <a href="/home"><i class="fas fa-house"></i> Home</a>
+            <a href="/profile"><i class="fas fa-user"></i> Profile</a>
+            <a href="/history"><i class="fas fa-clock-rotate-left"></i> History</a>
+            <a href="/contact"><i class="fas fa-address-book"></i> Contact Us</a>
+            <a href="/logout" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+
+
+        <div class="main-content">
+            <h2 class="contact-heading">Meet Our Team</h2>
+
+            <div class="card">
+                <div class="avatar-row">
+                    <div class="avatar-box">
+                        <img src="{{ url_for('static', filename='avatar2.png') }}" alt="Avatar 1">
+                        <p><strong>Ganesh Kollapudi</strong></p>
+                        <a href="mailto:gxk53780@ucmo.com">gxk53780@ucmo.com</a>
+                    
+                    </div>
+                    <div class="avatar-box">
+                        <img src="{{ url_for('static', filename='avatar2.png') }}" alt="Avatar 2">
+                        <p>Avinash Kasipathi</p>
+                        <a href="mailto:axk11950@ucmo.com">axk11950@ucmo.com</a>
+                    </div>
+                </div>
+                <div class="avatar-row">
+                    <div class="avatar-box">
+                        <img src="{{ url_for('static', filename='avatar1.png') }}" alt="Avatar 3">
+                        <p>Gayathri Aragonda</p>
+                        <a href="mailto:gxa08100@ucmo.com">gxa08100@ucmo.com</a>
+                    </div>
+                    <div class="avatar-box">
+                        <img src="{{ url_for('static', filename='avatar1.png') }}" alt="Avatar 4">
+                        <p>Alekhya Ramisetty</p>
+                        <a href="mailto:axr50960@ucmo.com">axr50960@ucmo.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

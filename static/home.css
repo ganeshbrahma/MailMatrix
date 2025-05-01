@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3fcfb;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #65d1c3;
+    width: 250px;
+    padding: 40px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 25px;
+    display: block;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.welcome-user {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    align-self: flex-start;
+    color: #333;
+}
+
+.upload-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 500px;
+}
+
+.upload-card h2 {
+    margin-bottom: 10px;
+}
+
+.upload-card p {
+    margin-bottom: 30px;
+}
+
+.upload-button {
+    background: linear-gradient(to right, #4dd0b0, #9bf0b5);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.upload-button:hover {
+    opacity: 0.9;
+}
+
+.flash.success {
+    background-color: #d2f8e9;
+    color: #1a7859;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.csv-note {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.csv-note-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.csv-note img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+
+.sidebar a i {
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+

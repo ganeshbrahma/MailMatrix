@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fdfd;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #64d3c4;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    display: block;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-heading {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 1100px;  /* ⬅️ increased from 900px */
+    text-align: center;
+}
+
+
+.avatar-row {
+    display: flex;
+    justify-content: center;  /* better alignment */
+    gap: 80px;                /* ⬅️ increase horizontal spacing */
+    margin-bottom: 30px;
+}
+
+
+.avatar-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #8ceabb;
+    object-fit: cover;
+}
+
+.avatar-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    width: 18px;
+    text-align: center;
+}
+
+.avatar-box a {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #444;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.avatar-box a:hover {
+    color: #2abf9e;
+    text-decoration: underline;
+}
+

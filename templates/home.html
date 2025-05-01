@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MailMatrix - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+          <h2>MailMatrix</h2>
+          <a href="/home"><i class="fas fa-home"></i> Home</a>
+          <a href="/profile"><i class="fas fa-user"></i> Profile</a>
+          <a href="/history"><i class="fas fa-history"></i> History</a>
+          <a href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
+          <a href="/logout" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+
+
+        <div class="main-content">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+          {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+
+            <h2 class="welcome-heading">Welcome {{ first_name }}!</h2>
+
+            <div class="upload-card">
+                <p>Please choose a file to upload:</p>
+
+                <!-- ✅ Upload multiple offer letters -->
+                <form action="/upload_offer_letter" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="offer_letters" multiple required>
+                    <button type="submit" class="upload-button">Upload Offer Letters</button>
+                </form>
+
+                <!-- ✅ Upload single CSV file -->
+                <form action="/upload_recipients" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="recipients_csv" required>
+                    <button type="submit" class="upload-button">Upload Recipient CSV</button>
+
+                <!-- ✅ Sample PNG -->
+                <div class="csv-note">
+                  <p class="csv-note-title">📌 Note: Your recipients.csv file should be in the following format:</p>
+                  <img src="{{ url_for('static', filename='recipients_sample.png') }}" alt="CSV Format Example">
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

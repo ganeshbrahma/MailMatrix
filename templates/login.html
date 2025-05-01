@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MailMatrix - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+    <div class="login-wrapper">
+
+        <!-- Logo at top center -->
+        <div class="logo-header">
+            <img src="{{ url_for('static', filename='mailmatrix-logo.png') }}" alt="MailMatrix Logo">
+        </div>
+
+
+    <div class="login-container">
+        <div class="login-image">
+            <img src="{{ url_for('static', filename='login-illustration.png') }}" alt="Login Illustration">
+        </div>
+        <div class="login-box">
+            <img src="{{ url_for('static', filename='avatar.png') }}" alt="User Avatar" class="avatar">
+            <h2>Welcome</h2>
+            <form method="POST" action="/login">
+                <input type="text" name="email" placeholder="Email ID" required><br>
+                <input type="password" name="password" placeholder="Password" id="password"><br>
+                <label class="toggle-container">
+                    <input type="checkbox" onclick="togglePassword()">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Show Password</span><br>
+                <button type="submit">LOGIN</button>
+            </form>
+            <p>New User? <a href="/register">Register here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var x = document.getElementById("password");
+            x.type = x.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>
