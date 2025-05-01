@@ -27,3 +27,45 @@ MailMatrix is a cloud-native serverless web application to automate bulk email n
 
 ## 📁 Project Structure
 MailMatrix/ ├── app.py ├── controllers/ ├── static/ │ ├── css/ │ └── images/ ├── templates/ │ ├── login.html │ ├── register.html │ ├── home.html │ ├── profile.html │ └── history.html ├── lambda/ │ └── email_handler.py ├── assets/ │ └── logo.png └── README.md
+
+
+---
+
+## 🔧 Step-by-Step Implementation
+
+### 1️⃣ Set Up AWS Resources
+- Create an **S3 Bucket** (e.g., `mailmatrix-uploads`)
+- Create an **IAM Role** for Lambda:
+  - Permissions: S3 Read, SES SendEmail, CloudWatch Logs
+- Enable **Amazon SES** (Sandbox or Production)
+- Create verified identities (emails)
+
+### 2️⃣ Deploy Lambda Function
+- Navigate to AWS Lambda → Create Function
+- Choose: Author from scratch
+- Runtime: Python 3.9+
+- Upload or paste `email_handler.py`
+- Set environment variables:
+  - `SENDER_EMAIL`, `BUCKET_NAME`
+- Set trigger: **S3 PUT Object** on the bucket
+
+### 3️⃣ Configure Flask App (Local UI)
+- Clone the repo
+- Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+  
+### 4️⃣ Upload Offer Letter + Recipient CSV
+Upload recipients.csv (sample provided in /sample-data)
+Upload the offer letter (PDF)
+
+### 5️⃣ Lambda Execution
+Once the CSV is uploaded, Lambda is triggered
+For each row:
+If status = selected: Send offer letter as attachment
+If status = rejected: Send rejection email (no attachment)
+Emails are sent using Amazon SES
+
+### 6️⃣ Track History
+Login → Go to History page
+View past uploads and email actions taken
